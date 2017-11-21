@@ -26,6 +26,8 @@ render(
 )
 ```
 
+Normalize takes exactly one child.
+
 ## License
 
 [MIT](./LICENSE.md)

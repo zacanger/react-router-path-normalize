@@ -1,6 +1,6 @@
 {
   "name": "react-router-path-normalize",
-  "description": "react-router-path-normalize",
+  "description": "Normalize paths for React Router.",
   "version": "0.0.1",
   "author": {
     "name": "Zac Anger",

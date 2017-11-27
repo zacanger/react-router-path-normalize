@@ -7,14 +7,20 @@ import test from 'tape'
 import Normalize from '.'
 import renderer from 'react-test-renderer'
 
+const create = (c) => renderer.create(c).toJSON()
+
 test('Normalize', (t) => {
-  let n = renderer.create(
-    <MemoryRouter><Normalize><Route path="/" component={() => 'hello'} /></Normalize></MemoryRouter>
-  ).toJSON()
+  let n = create(
+    <MemoryRouter>
+      <Normalize>
+        <Route path="/" component={() => 'hello'} />
+      </Normalize>
+    </MemoryRouter>
+  )
   t.equal(n, 'hello', 'renders')
 
-  n = renderer.create(
-    <MemoryRouter initialEntries={[ '/foo//bar' ]}>
+  n = create(
+    <MemoryRouter initialEntries={[ '/foo/bar' ]}>
       <Normalize>
         <div>
           <Route component={() => null} />
@@ -22,10 +28,10 @@ test('Normalize', (t) => {
         </div>
       </Normalize>
     </MemoryRouter>
-  ).toJSON()
+  )
   t.deepEqual(n.children, [ 'matched' ], 'matches with normal path')
 
-  n = renderer.create(
+  n = create(
     <MemoryRouter initialEntries={[ '///foo//bar//' ]}>
       <Normalize>
         <div>
@@ -34,7 +40,7 @@ test('Normalize', (t) => {
         </div>
       </Normalize>
     </MemoryRouter>
-  ).toJSON()
+  )
   t.deepEqual(n.children, [ 'matched' ], 'matches even with extra slashes in path')
 
   t.end()

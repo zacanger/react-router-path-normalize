@@ -1,17 +1,18 @@
-import React from 'react'
-import { shape, string, node } from 'prop-types'
+// @flow
+
+import * as React from 'react'
 import { withRouter, Redirect } from 'react-router'
 
-const Normalize = ({ location: { pathname = '' }, children }) =>
+type NormalizeProps = {
+  location: {
+    pathname: string
+  },
+  children: React.Node
+}
+
+const Normalize = ({ location: { pathname = '' }, children }: NormalizeProps) =>
   /.*\/{2,}.*/.test(pathname)
     ? <Redirect to={pathname.replace(/\/{2,}/g, '/')} />
     : children
-
-Normalize.propTypes = {
-  location: shape({
-    pathname: string.isRequired
-  }).isRequired,
-  children: node.isRequired
-}
 
 export default withRouter(Normalize)

@@ -4,9 +4,7 @@ import * as React from 'react'
 import { withRouter, Redirect } from 'react-router'
 
 type NormalizeProps = {
-  location: {
-    pathname: string
-  },
+  location: { pathname: string },
   children: React.Node
 }
 

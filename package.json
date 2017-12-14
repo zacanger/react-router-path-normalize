@@ -14,7 +14,10 @@
   ],
   "scripts": {
     "build": "babel src/index.js --out-file lib/index.js",
-    "prebuild": "npm test",
+    "cover": "npm run cover:tape && npm run cover:flow",
+    "cover:flow": "flow-coverage-report --config .flow-coverage-report.json",
+    "cover:tape": "nyc npm run test:tape",
+    "prebuild": "npm run test:lint && npm run cover",
     "preversion": "npm run build",
     "test": "npm run test:lint && npm run test:flow && npm run test:tape",
     "test:flow": "flow && flow stop",
@@ -53,6 +56,8 @@
     "eslint-plugin-react": "7.5.1",
     "eslint-plugin-unicorn": "3.0.1",
     "flow-bin": "0.61.0",
+    "flow-coverage-report": "0.4.0",
+    "nyc": "11.3.0",
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "react-router": "4.2.0",
@@ -63,6 +68,21 @@
   },
   "engines": {
     "node": ">=8.0.0"
+  },
+  "nyc": {
+    "include": [
+      "src/index.js"
+    ],
+    "require": [
+      "babel-register"
+    ],
+    "sourceMap": true,
+    "instrument": true,
+    "reporter": [
+      "text",
+      "json",
+      "html"
+    ]
   },
   "peerDependencies": {
     "react": "^15.6.1 || ^16.0.0",

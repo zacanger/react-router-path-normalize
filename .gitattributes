@@ -137,3 +137,4 @@ Procfile text
 
 package-lock.json -diff
 flow-typed/**/* -diff
+js linguist-language=JSX

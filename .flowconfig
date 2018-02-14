@@ -1,15 +1,16 @@
 [ignore]
-<PROJECT_ROOT>/lib/*
-<PROJECT_ROOT>/node_modules/*
+.*/lib/.*
+.*/node_modules/.*
 
 [include]
-<PROJECT_ROOT>/src
+.*/src/.*
 
 [libs]
-<PROJECT_ROOT>/flow-typed
+flow-typed
 
 [lints]
 
 [options]
+experimental.const_params=true
 
 [strict]

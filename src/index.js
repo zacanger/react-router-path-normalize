@@ -9,7 +9,10 @@ type NormalizeProps = {
   children: React.Node
 }
 
-const Normalize = ({ location: { pathname = '' }, children }: NormalizeProps) => {
+const Normalize = ({
+  location: { pathname = '' },
+  children
+}: NormalizeProps): React.Node => {
   const normalized = normalize(pathname)
   return normalized === pathname
     ? children

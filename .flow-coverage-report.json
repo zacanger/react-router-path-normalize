@@ -6,7 +6,7 @@
   "includeGlob": [
     "src/index.js"
   ],
-  "threshold": 80,
+  "threshold": 60,
   "type": [
     "text",
     "html"

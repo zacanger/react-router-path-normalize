@@ -40,7 +40,7 @@
     "router"
   ],
   "dependencies": {
-    "path-normalize": "1.0.0"
+    "path-normalize": "1.1.0"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",

@@ -43,5 +43,29 @@ test('Normalize', (t) => {
   )
   t.deepEqual(n.children, [ 'matched' ], 'matches even with extra slashes in path')
 
+  n = create(
+    <MemoryRouter initialEntries={[ '/../foo/../../bar/..' ]}>
+      <Normalize>
+        <div>
+          <Route component={() => null} />
+          <Route exact path="/foo/bar" component={() => 'matched'} />
+        </div>
+      </Normalize>
+    </MemoryRouter>
+  )
+  t.deepEqual(n.children, [ 'matched' ], 'matches with attempted path traversal in path')
+
+  n = create(
+    <MemoryRouter initialEntries={[ '' ]}>
+      <Normalize>
+        <div>
+          <Route component={() => null} />
+          <Route exact path="/" component={() => 'matched'} />
+        </div>
+      </Normalize>
+    </MemoryRouter>
+  )
+  t.deepEqual(n.children, [ 'matched' ], 'matches / with empty string as path')
+
   t.end()
 })

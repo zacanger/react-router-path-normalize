@@ -40,7 +40,7 @@
     "router"
   ],
   "dependencies": {
-    "path-normalize": "1.2.1"
+    "path-normalize": "1.2.2"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
@@ -50,7 +50,7 @@
     "babel-preset-react": "6.24.1",
     "babel-preset-stage-3": "6.24.1",
     "babel-tape-runner": "2.0.1",
-    "eslint": "4.19.0",
+    "eslint": "4.19.1",
     "eslint-config-jane": "1.1.2",
     "eslint-plugin-babel": "4.1.2",
     "eslint-plugin-flowtype": "2.46.1",

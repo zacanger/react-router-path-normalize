@@ -40,11 +40,12 @@
     "router"
   ],
   "dependencies": {
-    "path-normalize": "2.0.1"
+    "path-normalize": "2.1.0"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
     "babel-eslint": "8.2.3",
+    "babel-plugin-add-module-exports": "0.2.1",
     "babel-preset-env": "1.6.1",
     "babel-preset-flow": "6.23.0",
     "babel-preset-react": "6.24.1",

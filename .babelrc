@@ -4,5 +4,8 @@
     "env",
     "stage-3",
     "react"
+  ],
+  "plugins": [
+    "add-module-exports"
   ]
 }

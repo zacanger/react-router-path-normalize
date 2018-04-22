@@ -1,6 +1,6 @@
 {
   "root": true,
-  "extends": [ "eslint-config-jane", "plugin:flowtype/recommended" ],
+  "extends": [ "eslint-config-zacanger", "plugin:flowtype/recommended" ],
   "plugins": [ "flowtype" ],
   "rules": {
     "flowtype/boolean-style": [ 1, "bool" ],

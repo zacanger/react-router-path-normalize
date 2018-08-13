@@ -9,11 +9,17 @@ type NormalizeProps = {
   children: React.Node
 }
 
+const handleTraversal = (path: string): string =>
+  path
+    .split('/')
+    .filter((s: string): bool => !/^\.{2,}$/.test(s))
+    .join('/')
+
 const Normalize = ({
   location: { pathname = '' },
   children
 }: NormalizeProps): React.Node => {
-  const normalized = normalize(pathname)
+  const normalized = normalize(handleTraversal(pathname))
   return normalized === pathname
     ? children
     : <Redirect to={normalized} />

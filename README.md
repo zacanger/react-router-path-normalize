@@ -2,6 +2,8 @@
 
 Normalize paths for React Router.
 
+[![npm version](https://img.shields.io/npm/v/react-router-path-normalize.svg)](https://npm.im/react-router-path-normalize) [![CircleCI](https://circleci.com/gh/zacanger/react-router-path-normalize/tree/master.svg?style=svg)](https://circleci.com/gh/zacanger/react-router-path-normalize/tree/master) [![codecov](https://codecov.io/gh/zacanger/react-router-path-normalize/branch/master/graph/badge.svg)](https://codecov.io/gh/zacanger/react-router-path-normalize)
+
 --------
 
 ## Installation

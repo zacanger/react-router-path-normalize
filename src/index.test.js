@@ -9,6 +9,7 @@ import renderer from 'react-test-renderer'
 
 const create = (c) => renderer.create(c).toJSON()
 
+// eslint-disable-next-line max-lines-per-function
 test('Normalize', (t) => {
   let n = create(
     <MemoryRouter>

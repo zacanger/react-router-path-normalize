@@ -25,4 +25,5 @@ const Normalize = ({
     : <Redirect to={normalized} />
 }
 
+// $FlowFixMe
 export default withRouter(Normalize)

@@ -18,10 +18,9 @@
     "cover": "nyc npm run test:tape",
     "prebuild": "sortpack && run-s -s test:lint cover clean",
     "preversion": "npm run build",
-    "test": "run-s -s test:lint test:ts test:tape",
+    "test": "run-s -s test:lint test:tape",
     "test:lint": "eslint -c .eslintrc.json src/",
-    "test:tape": "babel-tape-runner src/index.test.js",
-    "test:ts": "tsc --noEmit"
+    "test:tape": "babel-tape-runner src/index.test.js"
   },
   "homepage": "https://github.com/zacanger/react-router-path-normalize#readme",
   "repository": {

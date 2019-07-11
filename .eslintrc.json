@@ -1,12 +1,9 @@
 {
   "root": true,
-  "extends": [ "eslint-config-zacanger", "plugin:flowtype/recommended" ],
-  "plugins": [ "flowtype" ],
-  "rules": {
-    "flowtype/boolean-style": [ 1, "bool" ],
-    "flowtype/no-weak-types": [ 0 ],
-    "flowtype/space-after-type-colon": [ 1 ],
-    "flowtype/no-types-missing-file-annotation": [ 0 ],
-    "flowtype/require-return-type": [ 1, "always", { "excludeArrowFunctions": "expressionsOnly" } ]
+  "extends": [ "eslint-config-zacanger" ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }

@@ -2,7 +2,7 @@
 
 Normalize paths for React Router.
 
-[![npm version](https://img.shields.io/npm/v/react-router-path-normalize.svg)](https://npm.im/react-router-path-normalize) [![CircleCI](https://circleci.com/gh/zacanger/react-router-path-normalize/tree/master.svg?style=svg)](https://circleci.com/gh/zacanger/react-router-path-normalize/tree/master) [![codecov](https://codecov.io/gh/zacanger/react-router-path-normalize/branch/master/graph/badge.svg)](https://codecov.io/gh/zacanger/react-router-path-normalize) [![Known Vulnerabilities](https://snyk.io/test/github/zacanger/react-router-path-normalize/badge.svg)](https://snyk.io/test/github/zacanger/react-router-path-normalize)
+[![npm version](https://img.shields.io/npm/v/react-router-path-normalize.svg)](https://npm.im/react-router-path-normalize) [![CircleCI](https://circleci.com/gh/zacanger/react-router-path-normalize/tree/master.svg?style=svg)](https://circleci.com/gh/zacanger/react-router-path-normalize/tree/master) [![codecov](https://codecov.io/gh/zacanger/react-router-path-normalize/branch/master/graph/badge.svg)](https://codecov.io/gh/zacanger/react-router-path-normalize) [![Known Vulnerabilities](https://snyk.io/test/github/zacanger/react-router-path-normalize/badge.svg)](https://snyk.io/test/github/zacanger/react-router-path-normalize) [![Patreon](https://img.shields.io/badge/patreon-donate-yellow.svg)](https://www.patreon.com/zacanger) [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/U7U2110VB)
 
 --------
 
@@ -32,14 +32,6 @@ Normalize takes exactly one child.
 
 Uses [path-normalize](https://www.npmjs.com/package/path-normalize) under the
 hood.
-
-## Patreon Sponsors
-
-[![Patreon](https://img.shields.io/badge/patreon-donate-yellow.svg)](https://www.patreon.com/zacanger)
-
-This project is sponsored on [Patreon](https://www.patreon.com/zacanger) by:
-
-* Keeley Hammond
 
 ## License
 

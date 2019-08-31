@@ -33,6 +33,4 @@ Normalize takes exactly one child.
 Uses [path-normalize](https://www.npmjs.com/package/path-normalize) under the
 hood.
 
-## License
-
-[MIT](./LICENSE.md)
+[LICENSE](./LICENSE.md)

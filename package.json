@@ -1,7 +1,7 @@
 {
   "name": "react-router-path-normalize",
   "description": "Normalize paths for React Router.",
-  "version": "3.0.7",
+  "version": "3.0.8",
   "author": {
     "email": "zac@zacanger.com",
     "name": "Zac Anger",
@@ -14,9 +14,9 @@
   ],
   "scripts": {
     "build": "babel src/index.js --out-file lib/index.js",
-    "format": "prettier --write src/*.js",
     "clean": "rm -rf lib && mkdir -p lib",
     "cover": "nyc npm run test:tape",
+    "format": "prettier --write src/*.js",
     "prebuild": "sortpack && run-s -s test:lint cover clean",
     "preversion": "npm run build",
     "test": "run-s -s test:lint test:tape",

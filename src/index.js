@@ -10,14 +10,9 @@ const handleTraversal = (path) =>
     .filter((s) => !/^\.{2,}$/.test(s))
     .join('/')
 
-const Normalize = ({
-  location: { pathname = '' },
-  children
-}) => {
+const Normalize = ({ location: { pathname = '' }, children }) => {
   const normalized = normalize(handleTraversal(pathname))
-  return normalized === pathname
-    ? children
-    : <Redirect to={normalized} />
+  return normalized === pathname ? children : <Redirect to={normalized} />
 }
 
 export default withRouter(Normalize)

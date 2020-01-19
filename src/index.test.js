@@ -21,7 +21,7 @@ test('Normalize', (t) => {
   t.equal(n, 'hello', 'renders')
 
   n = create(
-    <MemoryRouter initialEntries={[ '/foo/bar' ]}>
+    <MemoryRouter initialEntries={['/foo/bar']}>
       <Normalize>
         <div>
           <Route component={() => null} />
@@ -30,10 +30,10 @@ test('Normalize', (t) => {
       </Normalize>
     </MemoryRouter>
   )
-  t.deepEqual(n.children, [ 'matched' ], 'matches with normal path')
+  t.deepEqual(n.children, ['matched'], 'matches with normal path')
 
   n = create(
-    <MemoryRouter initialEntries={[ '///foo//bar//' ]}>
+    <MemoryRouter initialEntries={['///foo//bar//']}>
       <Normalize>
         <div>
           <Route component={() => null} />
@@ -42,10 +42,14 @@ test('Normalize', (t) => {
       </Normalize>
     </MemoryRouter>
   )
-  t.deepEqual(n.children, [ 'matched' ], 'matches even with extra slashes in path')
+  t.deepEqual(
+    n.children,
+    ['matched'],
+    'matches even with extra slashes in path'
+  )
 
   n = create(
-    <MemoryRouter initialEntries={[ '/../foo/../../bar/..' ]}>
+    <MemoryRouter initialEntries={['/../foo/../../bar/..']}>
       <Normalize>
         <div>
           <Route component={() => null} />
@@ -54,10 +58,14 @@ test('Normalize', (t) => {
       </Normalize>
     </MemoryRouter>
   )
-  t.deepEqual(n.children, [ 'matched' ], 'matches with attempted path traversal in path')
+  t.deepEqual(
+    n.children,
+    ['matched'],
+    'matches with attempted path traversal in path'
+  )
 
   n = create(
-    <MemoryRouter initialEntries={[ '' ]}>
+    <MemoryRouter initialEntries={['']}>
       <Normalize>
         <div>
           <Route component={() => null} />
@@ -66,7 +74,7 @@ test('Normalize', (t) => {
       </Normalize>
     </MemoryRouter>
   )
-  t.deepEqual(n.children, [ 'matched' ], 'matches / with empty string as path')
+  t.deepEqual(n.children, ['matched'], 'matches / with empty string as path')
 
   t.end()
 })

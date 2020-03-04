@@ -1,11 +1,15 @@
 {
   "name": "react-router-path-normalize",
   "description": "Normalize paths for React Router.",
-  "version": "3.0.8",
+  "version": "3.0.9",
   "author": {
     "email": "zac@zacanger.com",
     "name": "Zac Anger",
     "url": "http://zacanger.com"
+  },
+  "funding": {
+    "type": "ko-fi",
+    "url": "https://ko-fi.com/zacanger"
   },
   "license": "LGPL-3.0",
   "main": "lib/index.js",
@@ -82,9 +86,5 @@
   "peerDependencies": {
     "react": "^16.0.0",
     "react-router": "^4.0.0 || ^5.0.0"
-  },
-  "funding": {
-    "type": "ko-fi",
-    "url": "https://ko-fi.com/zacanger"
   }
 }
